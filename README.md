@@ -15,8 +15,8 @@ Create a app in heroku and fork this repo then  connect to your github account a
 
 after successfully deploy goto setting and fill This Given Value in Your Config Vars
 
-<code> KEY = OWNER_ID | VALUE = YOUR USER ID </code>
-<code> KEY = OWNER_USERNAME | VALUE = YOUR USER NAME </code>
+<code> KEY = OWNER_ID | VALUE = YOUR USER ID </code> <br>
+<br><code> KEY = OWNER_USERNAME | VALUE = YOUR USER NAME </code>
 <code> KEY = SUDO_USERS | VALUE = YOUR SUDO USERS ID </code>
 <code> KEY = SUPPORT_USERS | VALUE = YOUR SUPPORT USERS ID </code>
 <code> KEY = WHITELIST_USERS | VALUE = YOUR WHITELISTED USERS ID <code>
