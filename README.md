@@ -16,17 +16,17 @@ Create a app in heroku and fork this repo then  connect to your github account a
 after successfully deploy goto setting and fill This Given Value in Your Config Vars
 
 <code> KEY = OWNER_ID | VALUE = YOUR USER ID </code> <br>
-<br><code> KEY = OWNER_USERNAME | VALUE = YOUR USER NAME </code>
-<code> KEY = SUDO_USERS | VALUE = YOUR SUDO USERS ID </code>
-<code> KEY = SUPPORT_USERS | VALUE = YOUR SUPPORT USERS ID </code>
-<code> KEY = WHITELIST_USERS | VALUE = YOUR WHITELISTED USERS ID <code>
-<code> KEY = ENV | VALUE = ANYTHING </code>
-<code> KEY = DEL_CMDS | VALUE = True </code>
-<code> KEY = MESSAGE_DUMP | VALUE = EXAMPLE " USE CHAT ID MUST PRIVATE " </code>
-<code> KEY = ALLOW_EXCL | VALUE = True </code>
-<code> KEY = TOKEN | VALUE = YOUR BOT TOKEN FOR BOT FATHER </code>
-<code> KEY = STRICT_GBAN | VALUE = True </code>
-<code> KEY = PORT | VALUE = 8443 </code>
+<br><code> KEY = OWNER_USERNAME | VALUE = YOUR USER NAME </code> 
+<br><code> KEY = SUDO_USERS | VALUE = YOUR SUDO USERS ID </code>
+<br><code> KEY = SUPPORT_USERS | VALUE = YOUR SUPPORT USERS ID </code>
+<br><code> KEY = WHITELIST_USERS | VALUE = YOUR WHITELISTED USERS ID <code>
+<br><code> KEY = ENV | VALUE = ANYTHING </code>
+<br><code> KEY = DEL_CMDS | VALUE = True </code>
+<br><code> KEY = MESSAGE_DUMP | VALUE = EXAMPLE " USE CHAT ID MUST PRIVATE " </code>
+<br><code> KEY = ALLOW_EXCL | VALUE = True </code>
+<br><code> KEY = TOKEN | VALUE = YOUR BOT TOKEN FOR BOT FATHER </code>
+<br><code> KEY = STRICT_GBAN | VALUE = True </code>
+<br><code> KEY = PORT | VALUE = 8443 </code>
 
 # NOTE DON'T FORGET TO ADD DATABASE ADD ON HEROKU POSGRES THEN TURN ON WORKER
 # Thanks To 
