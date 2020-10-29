@@ -19,7 +19,12 @@ after successfully deploy goto setting and fill This Given Value in Your Config 
 <br><code> KEY = OWNER_USERNAME | VALUE = YOUR USER NAME </code> 
 <br><code> KEY = SUDO_USERS | VALUE = YOUR SUDO USERS ID </code>
 <br><code> KEY = SUPPORT_USERS | VALUE = YOUR SUPPORT USERS ID </code>
-<br><code> KEY = WHITELIST_USERS | VALUE = YOUR WHITELISTED USERS ID <code><br>
+<br><code> KEY = WHITELIST_USERS | VALUE = YOUR WHITELISTED USERS ID </code>
+
+
+
+
+
 <br><code> KEY = ENV | VALUE = ANYTHING </code></br>
 <br><code> KEY = DEL_CMDS | VALUE = True </code></br>
 <br><code> KEY = MESSAGE_DUMP | VALUE = EXAMPLE " USE CHAT ID MUST PRIVATE " </code></br>
