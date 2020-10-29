@@ -15,7 +15,7 @@ Create a app in heroku and fork this repo then  connect to your github account a
 
 after successfully deploy goto setting and fill This Given Value in Your Config Vars
 
-<code> KEY = OWNER_ID | VALUE = YOUR USER ID </code> <br>
+<br><code> KEY = OWNER_ID | VALUE = YOUR USER ID </code> <br>
 <br><code> KEY = OWNER_USERNAME | VALUE = YOUR USER NAME </code> 
 <br><code> KEY = SUDO_USERS | VALUE = YOUR SUDO USERS ID </code>
 <br><code> KEY = SUPPORT_USERS | VALUE = YOUR SUPPORT USERS ID </code>
@@ -26,7 +26,7 @@ after successfully deploy goto setting and fill This Given Value in Your Config 
 <br><code> KEY = ALLOW_EXCL | VALUE = True </code><br>
 <br><code> KEY = TOKEN | VALUE = YOUR BOT TOKEN FOR BOT FATHER </code><br>
 <br><code> KEY = STRICT_GBAN | VALUE = True </code><br>
-<br><code> KEY = PORT | VALUE = 8443 </code>
+<br><code> KEY = PORT | VALUE = 8443 </code><br>
 
 # NOTE DON'T FORGET TO ADD DATABASE ADD ON HEROKU POSGRES THEN TURN ON WORKER
 # Thanks To 
