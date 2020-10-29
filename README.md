@@ -7,6 +7,28 @@
 # Marvel-English
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/noobanon/missmarvel)
 
+# Deploy This Bot Manual by @noobanon
+
+<b>If deploy button not gonna work or you getting deploy error use this method</b>
+
+Create a app in heroku and fork this repo then  connect to your github account and deploy
+
+after successfully deploy goto setting and fill This Given Value in Your Config Vars
+
+<code> KEY = OWNER_ID | VALUE = YOUR USER ID </code>
+<code> KEY = OWNER_USERNAME | VALUE = YOUR USER NAME </code>
+<code> KEY = SUDO_USERS | VALUE = YOUR SUDO USERS ID </code>
+<code> KEY = SUPPORT_USERS | VALUE = YOUR SUPPORT USERS ID </code>
+<code> KEY = WHITELIST_USERS | VALUE = YOUR WHITELISTED USERS ID <code>
+<code> KEY = ENV | VALUE = ANYTHING </code>
+<code> KEY = DEL_CMDS | VALUE = True </code>
+<code> KEY = MESSAGE_DUMP | VALUE = EXAMPLE " USE CHAT ID MUST PRIVATE " </code>
+<code> KEY = ALLOW_EXCL | VALUE = True </code>
+<code> KEY = TOKEN | VALUE = YOUR BOT TOKEN FOR BOT FATHER </code>
+<code> KEY = STRICT_GBAN | VALUE = True </code>
+<code> KEY = PORT | VALUE = 8443 </code>
+
+# NOTE DON'T FORGET TO ADD DATABASE ADD ON HEROKU POSGRES THEN TURN ON WORKER
 # Thanks To 
 Pual Larson [ Maria Creator ]
 Ayra Hikari [Fed V2 + Best Source Updater ]
