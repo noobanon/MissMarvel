@@ -134,14 +134,14 @@ def send_start(bot, update):
         pass
 
     #chat = update.effective_chat  # type: Optional[Chat] and unused variable
-    text = "Heya ;), My name is MissMarvel!\n\
-I'm a Group Manager Bot maintained by @MayankMk \n\n"
+    text = "Heya ;), My name is Yuno Gasai!\n\
+I'm a Anime theme Group Manager Bot maintained by @Amalbiju154 \n\n"
     
-    text += "Want me to handle you ? [Click here!](t.me/missmarvel_bot?startgroup=true) \n\n\
-Support Group [Here!](https://t.me/zonerschat) \n\n\
+    text += "Want me to handle you ? [Click here!](t.me/Yunogasaichatbot?startgroup=true) \n\n\
+Support Group [Here!](https://t.me/Animemusicarchive6) \n\n\
 Special Thanks to Me."
 
-    keyboard = [[InlineKeyboardButton(text="📢 Announcement", url="https://t.me/CrackingCrew")]]
+    keyboard = [[InlineKeyboardButton(text="📢 Announcement", url="https://t.me/Animemusicarchive6")]]
     keyboard += [[InlineKeyboardButton(text="🛠 Control panel", callback_data="cntrl_panel_M")]]
     keyboard += [[InlineKeyboardButton(text="🇺🇸 Language", callback_data="set_lang_"), 
         InlineKeyboardButton(text="❔ Help", callback_data="help_back")]]
