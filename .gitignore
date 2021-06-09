@@ -1,0 +1,8 @@
+haruka/config.py
+*.pyc
+.idea/
+.project
+.pydevproject
+.directory
+*.backup
+.vscode

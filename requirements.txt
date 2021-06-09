@@ -1,0 +1,36 @@
+#Copyright (C) 2021 Free Software @noobanon @FakeMasked , Inc.[ https://t.me/noobanon https://t.me/FakeMasked ]
+#Everyone is permitted to copy and distribute verbatim copies
+#of this license document, but changing it is not allowed.
+#The GNGeneral Public License is a free, copyleft license for
+#software and other kinds of works.
+#PTB13 Updated by @noobanon
+
+future
+emoji
+requests
+sqlalchemy==1.3.23
+python-telegram-bot==13.6
+psycopg2
+feedparser
+pyowm
+pythonping
+pynewtonmath
+#memes from SkittBot
+spongemock
+zalgo-text
+geopy
+nltk
+aiohttp>=2.2.5
+Pillow>=4.2.0
+#Cool stuff by Peak
+PyLyrics
+#AEX
+hurry.filesize
+#translator
+beautifulsoup4==4.6.3
+tldextract
+wikipedia
+googletrans
+alphabet_detector
+psutil
+nekos.py
