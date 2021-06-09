@@ -1,4 +1,4 @@
-haruka/config.py
+marvel/config.py
 *.pyc
 .idea/
 .project
