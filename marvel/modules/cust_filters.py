@@ -277,8 +277,8 @@ Now, anyone saying "hello" will be replied to with "Hello there! How are you?".
 
 __mod_name__ = "Filters"
 
-FILTER_HANDLER = DisableAbleCommandHandler("filter", filters, run_async=True)
-STOP_HANDLER = DisableAbleCommandHandler("stop", stop_filter, run_async=True)
+FILTER_HANDLER = DisableAbleCommandHandler("filter", filters, run_async=False)
+STOP_HANDLER = DisableAbleCommandHandler("stop", stop_filter, run_async=False)
 LIST_HANDLER = DisableAbleCommandHandler("filters", list_handlers, admin_ok=True, run_async=True)
 CUST_FILTER_HANDLER = MessageHandler(CustomFilters.has_text, reply_filter, run_async=True)
 
