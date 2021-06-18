@@ -66,6 +66,17 @@ def list_handlers(update, context):
 
     update.effective_message.reply_text(filter_list.format(chat_name), parse_mode=telegram.ParseMode.MARKDOWN)
 
+def addnew_filter(update, chat_id, keyword, content, is_sticker, is_document, is_image, is_audio, is_voice, is_video, buttons):
+    msg = update.effective_message
+    totalfilt = sql.get_chat_triggers(chat_id)
+    if len(totalfilt) >= 120:  #May Be This Func Will Help To Stop Spam Dunnu Kkthnx bie
+        msg.reply_text("This group has reached its max filters limit of 120.")
+        return False
+    else:
+        sql.add_filter(chat_id, keyword, content, is_sticker, is_document, is_image, is_audio, is_voice, is_video,
+                   buttons)
+        return True
+
 # NOT ASYNC BECAUSE DISPATCHER HANDLER RAISED
 @user_admin
 def filters(update, context):
@@ -141,16 +152,15 @@ def filters(update, context):
 
     # Add the filter
     # Note: perhaps handlers can be removed somehow using sql.get_chat_filters
+    add = addnew_filter(update, chat_id, keyword, content, is_sticker, is_document, is_image, is_audio, is_voice, is_video,
+                   buttons)
+    
     for handler in dispatcher.handlers.get(HANDLER_GROUP, []):
         if handler.filters == (keyword, chat_id):
-            dispatcher.remove_handler(handler, HANDLER_GROUP)
-
-    sql.add_filter(chat_id, keyword, content, is_sticker, is_document, is_image, is_audio, is_voice, is_video,
-                   buttons)
-
-    msg.reply_text(tld(chat.id, "Handler '{}' added in *{}*!").format(keyword, chat_name), parse_mode=telegram.ParseMode.MARKDOWN)
+            dispatcher.remove_handler(handler, HANDLER_GROUP)            
+            if add is True:                
+                msg.reply_text(tld(chat.id, "Handler '{}' added in *{}*!").format(keyword, chat_name), parse_mode=telegram.ParseMode.MARKDOWN)
     raise DispatcherHandlerStop
-
 
 # NOT ASYNC BECAUSE DISPATCHER HANDLER RAISED
 @user_admin
