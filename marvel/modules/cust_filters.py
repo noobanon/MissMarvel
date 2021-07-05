@@ -15,7 +15,7 @@ from telegram.error import BadRequest
 from telegram.ext import CommandHandler, MessageHandler, DispatcherHandlerStop, run_async, CallbackQueryHandler, Filters
 from telegram.utils.helpers import escape_markdown, mention_markdown
 
-from marvel import dispatcher, LOGGER, spamcheck, OWNER_ID, SUDO_USERS
+from marvel import dispatcher, LOGGER, OWNER_ID, SUDO_USERS
 from marvel.modules.disable import DisableAbleCommandHandler
 from marvel.modules.helper_funcs.chat_status import user_admin
 from marvel.modules.helper_funcs.extraction import extract_text
