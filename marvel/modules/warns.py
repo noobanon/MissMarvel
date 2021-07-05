@@ -164,7 +164,9 @@ def warn_user(update, context) -> str:
     message = update.effective_message  # type: Optional[Message]
     chat = update.effective_chat  # type: Optional[Chat]
     warner = update.effective_user  # type: Optional[User]
-    bot = context.bot
+    bot = context.bot 
+    args = context.args
+
 
     user_id, reason = extract_user_and_text(message, args)
 
