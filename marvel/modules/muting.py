@@ -131,7 +131,7 @@ def unmute(update, context) -> str:
                 and member.can_send_other_messages and member.can_add_web_page_previews:
             message.reply_text(tld(chat.id, "This user already has the right to speak in {}.").format(chatD.title))
         else:
-            context.bot.restrict_chat_member(chatD, int(user_id),
+            context.bot.restrict_chat_member(chatD.id, int(user_id),
                                         permissions=ChatPermissions(
                                          can_send_messages=True,
                                          can_send_media_messages=True,
