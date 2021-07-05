@@ -47,7 +47,6 @@ ENUM_FUNC_MAP = {
 
 
 
-@spamcheck
 def list_handlers(update, context):
 	chat = update.effective_chat  # type: Optional[Chat]
 	user = update.effective_user  # type: Optional[User]
@@ -85,7 +84,6 @@ def list_handlers(update, context):
 
 
 # NOT ASYNC BECAUSE DISPATCHER HANDLER RAISED
-@spamcheck
 @user_admin
 def filters(update, context):
 	chat = update.effective_chat  # type: Optional[Chat]
@@ -179,7 +177,6 @@ def filters(update, context):
 
 
 # NOT ASYNC BECAUSE DISPATCHER HANDLER RAISED
-@spamcheck
 @user_admin
 def stop_filter(update, context):
 	chat = update.effective_chat  # type: Optional[Chat]
