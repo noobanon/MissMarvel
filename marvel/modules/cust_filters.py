@@ -85,7 +85,7 @@ def filters(update, context):
     msg = update.effective_message  # type: Optional[Message]
     args = msg.text.split(None, 1)  # use python's maxsplit to separate Cmd, keyword, and reply_text
 
-    conn = connected(bot, update, chat, user.id)
+    conn = connected(context.bot, update, chat, user.id)
     if not conn == False:
         chat_id = conn
         chat_name = dispatcher.bot.getChat(conn).title
