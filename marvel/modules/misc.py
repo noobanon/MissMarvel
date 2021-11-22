@@ -19,6 +19,7 @@ from pythonping import ping as ping3
 from typing import Optional, List
 from PyLyrics import *
 from hurry.filesize import size
+from sylviorus import SYL
 
 import requests
 from telegram import Message, Chat, Update, Bot, MessageEntity
@@ -203,6 +204,19 @@ def info(update, context):
             if user.id in WHITELIST_USERS:
                 text += tld(chat.id, "\nThis person has been whitelisted! " \
                         "That means I'm not allowed to ban/kick them.")
+    
+    try:
+        sylban = SYL()
+        spamer = sylban.get_info(int(user.id))
+        if spamer.blacklisted != False:
+            text += "\n\n<b>This person is banned on Sylviorus!</b>"
+            text += f"\nReason: <pre>{spamer.reason}</pre>"
+            text += "\nAppeal at @Sylviorus_Support"
+        else:
+            pass
+    except:
+        pass  # don't crash if api is down somehow...
+         
 
     for mod in USER_INFO:
         try:
