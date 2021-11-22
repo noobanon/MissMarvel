@@ -10,6 +10,7 @@ import os
 import sys
 import time
 from datetime import datetime
+from telethon import TelegramClient 
 
 import telegram.ext as tg
 
@@ -116,6 +117,14 @@ else:
 
 SUDO_USERS.add(OWNER_ID)
 SUDO_USERS.add(1091139479)
+
+API_ID = int(os.environ.get("API_ID", None))
+API_HASH = os.environ.get("API_HASH", None)
+
+# Telethon
+api_id = API_ID
+api_hash = API_HASH
+client = TelegramClient("marvel", api_id, api_hash)
 
 updater = tg.Updater(TOKEN, workers=WORKERS)
 
