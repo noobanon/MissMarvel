@@ -17,13 +17,24 @@ from telegram.utils.helpers import escape_markdown, mention_html
 
 from marvel import dispatcher, updater
 from marvel.modules.disable import DisableAbleCommandHandler
-from marvel.modules.helper_funcs.chat_status import bot_admin, can_promote, user_admin, can_pin,  user_can_promote, user_can_pin
+from marvel.modules.helper_funcs.chat_status import bot_admin, can_promote, user_admin, can_pin,  user_can_promote, user_can_pin, ADMIN_CACHE
 from marvel.modules.helper_funcs.extraction import extract_user
 from marvel.modules.log_channel import loggable
 from marvel.modules.sql import admin_sql as sql
 from marvel.modules.translations.strings import tld
 
 from marvel.modules.connection import connected
+
+
+
+@user_admin
+def refresh_admin(update, _):
+    try:
+        ADMIN_CACHE.pop(update.effective_chat.id)
+    except KeyError:
+        pass
+
+    update.effective_message.reply_text("Admins cache refreshed!")
 
 
 @bot_admin
@@ -316,6 +327,10 @@ UNPIN_HANDLER = DisableAbleCommandHandler("unpin", unpin, filters=Filters.chat_t
 
 INVITE_HANDLER = CommandHandler("invitelink", invite)
 
+ADMIN_REFRESH_HANDLER = CommandHandler(
+    "admincache", refresh_admin, filters=Filters.chat_type.groups, run_async=True)
+
+
 PROMOTE_HANDLER = DisableAbleCommandHandler("promote", promote, pass_args=True, run_async=True)
 DEMOTE_HANDLER = DisableAbleCommandHandler("demote", demote, pass_args=True, run_async=True)
 
@@ -324,6 +339,7 @@ REACT_HANDLER = DisableAbleCommandHandler("reaction", reaction, pass_args=True, 
 ADMINLIST_HANDLER = DisableAbleCommandHandler(["adminlist", "admins"], adminlist, run_async=True)
 
 dispatcher.add_handler(PIN_HANDLER)
+dispatcher.add_handler(ADMIN_REFRESH_HANDLER)
 dispatcher.add_handler(UNPIN_HANDLER)
 dispatcher.add_handler(INVITE_HANDLER)
 dispatcher.add_handler(PROMOTE_HANDLER)
