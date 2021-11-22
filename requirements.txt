@@ -34,4 +34,5 @@ googletrans
 alphabet_detector
 psutil
 nekos.py
+mwt
 telethon
