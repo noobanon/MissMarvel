@@ -36,3 +36,4 @@ psutil
 nekos.py
 mwt
 telethon
+sylviorus
