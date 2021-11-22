@@ -23,7 +23,7 @@ from telegram.ext import CommandHandler, Filters, MessageHandler, CallbackQueryH
 from telegram.ext.dispatcher import run_async, DispatcherHandlerStop, Dispatcher
 from telegram.utils.helpers import escape_markdown, mention_html, mention_markdown
 
-from marvel import dispatcher, updater, TOKEN, WEBHOOK, OWNER_ID, CERT_PATH, PORT, URL, LOGGER
+from marvel import dispatcher, updater, TOKEN, WEBHOOK, OWNER_ID, CERT_PATH, PORT, URL, LOGGER, client
 # needed to dynamically load modules
 # NOTE: Module order is not guaranteed, specify that in the config file!
 from marvel.modules import ALL_MODULES
@@ -482,22 +482,23 @@ def main():
 
     if WEBHOOK:
         LOGGER.info("Using webhooks.")
-        updater.start_webhook(listen="127.0.0.1",
-                              port=PORT,
-                              url_path=TOKEN)
+        updater.start_webhook(listen="0.0.0.0", port=PORT, url_path=TOKEN)
 
         if CERT_PATH:
-            updater.bot.set_webhook(url=URL + TOKEN,
-                                    certificate=open(CERT_PATH, 'rb'))
+            updater.bot.set_webhook(url=URL + TOKEN, certificate=open(CERT_PATH, "rb"))
         else:
             updater.bot.set_webhook(url=URL + TOKEN)
+            client.run_until_disconnected()
 
     else:
         LOGGER.info("Using long polling.")
         updater.start_polling(timeout=15, read_latency=4)
+        client.run_until_disconnected()
 
     updater.idle()
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     LOGGER.info("Successfully loaded modules: " + str(ALL_MODULES))
+    client.start(bot_token=TOKEN)
     main()
