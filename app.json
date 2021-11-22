@@ -59,6 +59,14 @@
       "description": "Whether to delete commands from users which don't have rights to use that command",
       "value": "True"
     },
+    "API_ID": {
+      "description": "Your account api id",
+      "value": "put your api id here"
+    },
+    "API_HASH": {
+      "description": "Your api hash",
+      "value": "put you api hash here"
+    },
     "STRICT_GBAN": {
       "description": "Enforce gbans across new groups as well as old groups. When a gbanned user talks, he will be banned.",
       "value": "True"
