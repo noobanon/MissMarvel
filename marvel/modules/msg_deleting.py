@@ -3,7 +3,7 @@
 #of this license document, but changing it is not allowed.
 #The GNGeneral Public License is a free, copyleft license for
 #software and other kinds of works.
-#PTB13 Updated by @noobanon
+#PTB13 Updated by @noobanon // @FakeMasked
 
 from marvel import client, SUDO_USERS
 
