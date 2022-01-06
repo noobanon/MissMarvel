@@ -6,8 +6,10 @@
 #PTB13 Updated by @noobanon
 
 from functools import wraps
+from time import perf_counter
 from typing import Optional
 from cachetools import TTLCache	
+from threading import RLock
 from telegram import User, Chat, ChatMember, Update, Bot
 
 from marvel import DEL_CMDS, SUDO_USERS, WHITELIST_USERS
